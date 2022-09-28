@@ -189,8 +189,7 @@ public class RecipeController {
 			,HttpSession session) {
 
 		try {
-			System.out.println(listValue);
-			if(session.getAttribute("postingid") != null && (listValue == "" || listValue == null)) {
+			if(session.getAttribute("postingid") != null && (listValue == "" || listValue == null ) && page ==null) {
 				session.removeAttribute("postingid");
 				System.out.println("세션삭제");
 			}
